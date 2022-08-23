@@ -1,0 +1,16 @@
+.card {
+    width: 30%;
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.card img {
+    width: 100%;
+}
+.card-author{
+    color: darkgray;
+}
+.card-price{
+    font-weight: bold;
+}
