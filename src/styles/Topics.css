@@ -1,0 +1,11 @@
+.courses-section-topics {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0px -5px;
+    align-items: center;
+}
+button{
+    border: none;
+    font-size: bold;
+    background-color: white;
+}

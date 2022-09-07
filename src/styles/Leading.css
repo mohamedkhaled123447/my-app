@@ -1,0 +1,24 @@
+.leading-section-image {
+    width: 100%;
+}
+
+.leading-section-par {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: ghostwhite;
+}
+
+.leading-section-child {
+    background-color: white;
+    box-shadow: 0 2px 4px 0 rgba(14, 1, 1, 0.2);
+    height: 34%;
+    width: 36%;
+    padding: 30px;
+}
+@media screen and (min-width: 768px) {
+    .leading-section-par{
+        flex-direction: row;
+    }
+}

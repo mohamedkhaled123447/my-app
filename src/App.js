@@ -1,9 +1,9 @@
 import React from "react";
-import Courses from "./components/Courses";
+import Home from "./components/HomePage/Home";
 function App() {
   return (
    <div>
-      <Courses />
+      <Home/>
    </div>
   );
 }
