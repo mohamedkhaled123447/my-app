@@ -1,0 +1,15 @@
+.CourseOverview{
+    height: 200px;
+    background-color: black;
+    color: white;
+    padding:100px 50px;
+    
+    
+}
+.block{
+    display: inline-block;
+}
+.CourseOverview__rating{
+display: flex;
+align-items: center;
+}

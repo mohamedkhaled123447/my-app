@@ -1,0 +1,14 @@
+.ShortcutNavigation{
+    display: flex;
+    width: 60%;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+}
+.ShortcutNavigation a{
+    color: dimgray;
+    font-weight: bold;
+}
+.Shortcuts-container{
+    border-bottom: 1px solid #d1d7dc;
+}

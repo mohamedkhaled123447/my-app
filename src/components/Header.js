@@ -37,7 +37,7 @@ function Header() {
       <button className="login hide2">Log in</button>
       <button className="signup hide2">sign up</button>
       <img
-        className="hide2"
+        className="hide2 web-logo"
         src="https://cdn2.iconfinder.com/data/icons/online-shop-part-1-1/64/online_shop_ecommerce_shopping-31-256.png"
         alt="www"
         width="20"

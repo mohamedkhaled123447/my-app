@@ -3,9 +3,11 @@ import Carousel from "react-grid-carousel";
 import Card from "./Card";
 import "../../styles/Courses.css";
 import Description from "./Description";
+import { Link, useNavigate } from "react-router-dom";
 const Courses = () => {
   const [data, setData] = useState([]);
   const [arr, setArr] = useState([]);
+  const navigate=useNavigate
   const getData = () => {
     fetch("https://api.npoint.io/97bb9e30f0333a87eb67")
       .then((response) => response.json())
@@ -26,6 +28,7 @@ const Courses = () => {
       <Carousel responsiveLayout={arr}>
         {data.map((item) => (
           <Carousel.Item key={item.image}>
+            <Link to={`/CoursePage/${item.id}`}>
             <Card
               key={item.image}
               imgsrc={item.image}
@@ -33,6 +36,7 @@ const Courses = () => {
               author={item.instructors["name"]}
               price={item.price}
             ></Card>
+          </Link>
           </Carousel.Item>
         ))}
       </Carousel>

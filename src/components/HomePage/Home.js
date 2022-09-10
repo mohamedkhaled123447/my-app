@@ -8,7 +8,7 @@ import '../../styles/Home.css'
 function Home() {
   return (
     <>
-    <Header/>
+     <Header />
     <Leading/>
     <div className='Home'>
     <Board/>
