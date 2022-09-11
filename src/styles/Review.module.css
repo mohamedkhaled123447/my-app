@@ -1,0 +1,20 @@
+.name_card {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 100%;
+    background-color: black;
+    color: white;
+    width: 4rem;
+    height: 4rem;
+}
+._h1{
+        padding: 5px 0px 0px 12px;
+}
+.Review{
+    display: flex;
+    justify-content: space-between
+}
+.Review_body{
+    width: 80%;
+}
