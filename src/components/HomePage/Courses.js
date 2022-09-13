@@ -4,11 +4,12 @@ import Card from "./Card";
 import "../../styles/Courses.css";
 import Description from "./Description";
 import { Link, useNavigate } from "react-router-dom";
+import Skeleton from "@mui/material/Skeleton";
 const Courses = () => {
-  const [data, setData] = useState([]);
+  const [data, setData] = useState(null);
   const [arr, setArr] = useState([]);
-  const navigate=useNavigate
-  const getData = () => {
+  const navigate = useNavigate();
+  useEffect(() => {
     fetch("https://api.npoint.io/97bb9e30f0333a87eb67")
       .then((response) => response.json())
       .then((json) => setData(json));
@@ -18,28 +19,28 @@ const Courses = () => {
         console.log(json[0]);
         setArr(json);
       });
-  };
-  useEffect(() => {
-    getData();
   }, []);
   return (
     <div className="courses">
-      <Description/>
-      <Carousel responsiveLayout={arr}>
-        {data.map((item) => (
-          <Carousel.Item key={item.image}>
-            <Link to={`/CoursePage/${item.id}`}>
-            <Card
-              key={item.image}
-              imgsrc={item.image}
-              title={item.title}
-              author={item.instructors["name"]}
-              price={item.price}
-            ></Card>
-          </Link>
-          </Carousel.Item>
-        ))}
-      </Carousel>
+      <Description />
+      {data && (
+        <Carousel responsiveLayout={arr}>
+          {data.map((item) => (
+            <Carousel.Item key={item.image}>
+              <Link to={`/CoursePage/${item.id}`}>
+                <Card
+                  key={item.image}
+                  imgsrc={item.image}
+                  title={item.title}
+                  author={item.instructors["name"]}
+                  price={item.price}
+                ></Card>
+              </Link>
+            </Carousel.Item>
+          ))}
+        </Carousel>
+      )}
+      {!data && <Skeleton fitContent height={300} />}
     </div>
   );
 };
