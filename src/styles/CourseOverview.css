@@ -1,9 +1,12 @@
-.CourseOverview{
+.CourseOverviewContainer{
     height: 200px;
     background-color: black;
     color: white;
     padding:100px 50px;
+}
+.CourseOverview{
     
+    width: 60%;
     
 }
 .block{

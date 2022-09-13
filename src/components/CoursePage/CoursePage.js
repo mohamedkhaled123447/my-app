@@ -7,6 +7,7 @@ import WhatYouLearn from "./WhatYouLearn";
 import "../../styles/CoursePage.css";
 import CourseContent from "./CourseContent";
 import Reviews from "./Reviews";
+import CourseProfile from "./CourseProfile";
 function CoursePage(props) {
   const { id } = useParams();
   return (
@@ -25,6 +26,7 @@ function CoursePage(props) {
         <h1>Description</h1>
         <p>{props.data[id-1].description}</p>
         <Reviews data={props.data[id-1].reviews} />
+        <CourseProfile data={props.data[id-1]}/>
       </div>
     </>
   );

@@ -4,7 +4,7 @@ import "../../styles/CourseOverview.css";
 import ReactStars from "react-rating-stars-component";
 function CourseOverview(props) {
   return (
-    <>
+    <div className="CourseOverviewContainer">
     <div className="CourseOverview">
       <h1>{props.data.title}</h1>
       <h3>{props.data.Introduction}</h3>
@@ -29,7 +29,7 @@ function CourseOverview(props) {
         <span>last Updated {props.data.lastUpdate} {props.data.globe} {props.data.Captioning}</span>
       </div>
     </div>
-    </>
+    </div>
   );
 }
 
