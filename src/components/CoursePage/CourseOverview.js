@@ -6,6 +6,7 @@ function CourseOverview(props) {
   return (
     <div className="CourseOverviewContainer">
     <div className="CourseOverview">
+      <img src={props.data.image} alt="course" />
       <h1>{props.data.title}</h1>
       <h3>{props.data.Introduction}</h3>
       <div className="CourseOverview__rating">

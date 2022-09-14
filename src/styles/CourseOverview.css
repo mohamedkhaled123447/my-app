@@ -1,13 +1,14 @@
 .CourseOverviewContainer{
-    height: 200px;
     background-color: black;
     color: white;
-    padding:100px 50px;
 }
 .CourseOverview{
-    
     width: 60%;
-    
+    margin: 0 auto;
+    padding: 20px;
+}
+.CourseOverview img{
+    width: 100%;
 }
 .block{
     display: inline-block;
@@ -16,3 +17,17 @@
 display: flex;
 align-items: center;
 }
+@media screen and (min-width: 1090px) {
+    .CourseOverviewContainer{
+        height: 200px;
+        padding:100px 50px;
+    }
+    .CourseOverview img{
+        display: none;
+    }
+    .CourseOverview{
+        margin: 0;
+    }
+}
+    
+
