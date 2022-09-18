@@ -1,0 +1,19 @@
+.search-reviews{
+    display: flex;
+    margin-bottom: 20px;
+}
+.search-reviews .search {
+    border: 1px solid black;
+    border-radius: 0px;
+    height: 40px;
+    width: 60%;
+}
+.search-reviews .rating{
+    border: 1px solid black;
+    border-radius: 0px;
+    width: 30%;
+} 
+.search-reviews img{
+    margin-right: 50px;
+    height: 55px;
+}

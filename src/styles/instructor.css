@@ -1,0 +1,24 @@
+.instructor img {
+    border-radius: 50%;
+}
+
+.instructor h2 {
+    color: #5624d0;
+
+}
+.instructor-container{
+    display: flex;
+    align-items: center;
+}
+.instructor-info{
+    margin-left: 20px;
+}
+.instructor .icon {
+    margin-right: 1rem;
+}
+
+.instructor .line {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}

@@ -9,6 +9,7 @@ import CourseContent from "./CourseContent";
 import Reviews from "./Reviews";
 import CourseProfile from "./CourseProfile";
 import Skeleton from '@mui/material/Skeleton';
+import Instructor from "./Instructor";
 function CoursePage() {
   const [data, setData] = useState();
   const { id } = useParams();
@@ -36,6 +37,10 @@ function CoursePage() {
             })}
             <h1>Description</h1>
             <p>{data[id - 1].description}</p>
+            <h1>Instructors</h1>
+            {data[id - 1].instructor.map((instructor) => {
+              return <Instructor data={instructor} />;
+            })}
             <Reviews data={data[id - 1].reviews} />
             <CourseProfile data={data[id - 1]} />
           </div>
