@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "../styles/Header.css";
-function Header() {
+function Header({setSearch}) {
   return (
     <div className="container">
       <img
@@ -19,7 +19,7 @@ function Header() {
           width="20"
           height="34"
         />
-        <input type="text" placeholder="Search for anything" />
+        <input type="text" placeholder="Search for anything" onChange={setSearch}/>
       </div>
       <a href="" className="hide1">
         Udemy Business

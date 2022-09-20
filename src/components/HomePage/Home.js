@@ -6,14 +6,18 @@ import Board from './Board'
 import Topics from './Topics'
 import '../../styles/Home.css'
 function Home() {
+  const [input, setInput] = React.useState('')
+  const setSearch=(e)=>{
+    setInput(e.target.value);
+  }
   return (
     <>
-     <Header />
+     <Header setSearch={setSearch}/>
     <Leading/>
     <div className='Home'>
     <Board/>
     <Topics/>
-    <Courses/>
+    <Courses input={input}/>
     </div>
     </>
   )

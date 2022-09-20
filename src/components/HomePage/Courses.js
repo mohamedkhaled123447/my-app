@@ -5,14 +5,18 @@ import "../../styles/Courses.css";
 import Description from "./Description";
 import { Link, useNavigate } from "react-router-dom";
 import Skeleton from "@mui/material/Skeleton";
-const Courses = () => {
+const Courses = ({ input }) => {
   const [data, setData] = useState(null);
+  const [tempData, setTempdata] = useState();
   const [arr, setArr] = useState([]);
   const navigate = useNavigate();
   useEffect(() => {
     fetch("https://api.npoint.io/97bb9e30f0333a87eb67")
       .then((response) => response.json())
-      .then((json) => setData(json));
+      .then((json) => {
+        setTempdata(json);
+        setData(json);
+      });
     fetch("https://api.npoint.io/89f024141392bdbe562f")
       .then((response) => response.json())
       .then((json) => {
@@ -20,6 +24,14 @@ const Courses = () => {
         setArr(json);
       });
   }, []);
+  useEffect(() => {
+    if (input !== "") {
+      const newDate = tempData.filter((item) => {
+        return item.title.toLowerCase().includes(input.toLowerCase());
+      });
+      setData(newDate);
+    }
+  }, [input]);
   return (
     <div className="courses">
       <Description />
